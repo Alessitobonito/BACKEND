@@ -8,4 +8,6 @@ app = Flask(__name__)
 @app.route('/')
 def inicio():
     return 'Hola mundo desde flask'
-app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
