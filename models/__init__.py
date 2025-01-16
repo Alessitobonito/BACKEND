@@ -1,2 +1,2 @@
-from .categoria import categoriaModel
-from .producto import ProductModel
+from .categoria import CategoriaModel
+from .producto import ProductoModel

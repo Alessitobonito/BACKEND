@@ -1,7 +1,7 @@
 from instancias import conexion
 from sqlalchemy import Column, types, ForeignKey
 
-class ProductModel(conexion.Model):
+class ProductoModel(conexion.Model):
     __tablename__ = 'productos'
     id = Column(type_=types.Integer, autoincrement=True, primary_key=True)
     nombre = Column(type_=types.Text, nullable=False)

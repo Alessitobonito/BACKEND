@@ -2,7 +2,7 @@ from instancias import conexion
 from sqlalchemy import Column, types
 from datetime import datetime
 
-class categoriaModel(conexion.Model):
+class CategoriaModel(conexion.Model):
     __tablename__ = 'categorias'
     id = Column(types.Integer, autoincrement=True, primary_key=True, nullable=False)
     nombre = Column(types.Text, nullable=False)
