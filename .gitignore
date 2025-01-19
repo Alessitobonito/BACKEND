@@ -1,2 +1,4 @@
 entorno_*
+enteorno_*
 *.pyc
+.env
