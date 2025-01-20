@@ -1,3 +1,18 @@
 from django.shortcuts import render
 
-# Create your views here.
+def paginaInicial(request):
+
+    print(request)
+    data = [
+        {
+        'id': 1,
+        'nombre': 'Lapiz Faber Castell',
+        'descripcion': 'Lapiz B2'
+        },
+        {
+            'id': 2,
+            'nombre': 'Resaltador color amarillo',
+            'descripcion': None
+        }
+    ]
+    return render(request, 'inicio.html', {'data': data, 'mensaje':'Bienvenido'})
