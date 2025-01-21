@@ -11,15 +11,17 @@
         {% csrf_token %}
         <div class="mb-3">
             <label for="nombreProducto" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombreProducto" >
+            <input type="text" class="form-control" id="nombreProducto" name="nombreProducto">
         </div>
         <div class="mb-3">
             <label for="descripcionProducto" class="form-label">Descripcion</label>
             <input type="text" class="form-control" id="descripcionProducto" name="descripcionProducto">
         </div>
         <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-success">Crear Producto</button>
+            <button type="submit" class="btn btn-success" id="btnCrearProducto">Crear Producto</button>
         </div>
     </form>
 </div>
+{% load static %}
+<script src="{% static 'formulario_producto.js' %}"></script>
 {% endblock %}
