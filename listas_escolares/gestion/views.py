@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-def paginaInicial(request):
+def mostrarProductosPlantilla(request):
 
     print(request)
     data = [
@@ -15,4 +15,12 @@ def paginaInicial(request):
             'descripcion': None
         }
     ]
-    return render(request, 'inicio.html', {'data': data, 'mensaje':'Bienvenido'})
+    return render(request, 'mostrar_productos.html', {'data': data, 'mensaje':'Bienvenido'})
+
+def crearProductoFormulario(request):
+    if request.method == 'POST':
+        print(request.POST)
+        return redirect('mostrar_productos')
+    elif request.method == 'GET':
+         print('queremos ver el formulario')
+    return render(request, 'formulario_producto.html')
